@@ -74,8 +74,9 @@ For some Linux like Debian based (Kali, Parrot, etc.) it is called `krb5-user`. 
 
 ### Method 3. Using bundler (dependencies will not be installed on your system, just to use evil-winrm)
  - Step 1. Install bundler: `gem install bundler:2.0.2`
- - Step 2. Install dependencies with bundler: `cd evil-winrm && bundle install --path vendor/bundle`
- - Step 3. Launch it with bundler: `bundle exec evil-winrm.rb -i 192.168.1.100 -u Administrator -p 'MySuperSecr3tPass123!' -s '/home/foo/ps1_scripts/' -e '/home/foo/exe_files/'`
+ - Step 2. Clone the repo: `git clone https://github.com/Hackplayers/evil-winrm.git`
+ - Step 3. Install dependencies with bundler: `cd evil-winrm && bundle install --path vendor/bundle`
+ - Step 4. Launch it with bundler: `bundle exec evil-winrm.rb -i 192.168.1.100 -u Administrator -p 'MySuperSecr3tPass123!' -s '/home/foo/ps1_scripts/' -e '/home/foo/exe_files/'`
 
 ### Method 4. Using Docker
  - Step 1. Launch docker container based on already built image: `docker run --rm -ti --name evil-winrm -v /home/foo/ps1_scripts:/ps1_scripts -v /home/foo/exe_files:/exe_files -v /home/foo/data:/data oscarakaelvis/evil-winrm -i 192.168.1.100 -u Administrator -p 'MySuperSecr3tPass123!' -s '/ps1_scripts/' -e '/exe_files/'`
@@ -221,7 +222,7 @@ Use it at your own servers and/or with the server owner's permission.
 [@_Laox]: https://twitter.com/_Laox
 
 <!-- Badges URLs -->
-[Version-shield]: https://img.shields.io/badge/version-2.3-blue.svg?style=flat-square&colorA=273133&colorB=0093ee "Latest version"
+[Version-shield]: https://img.shields.io/badge/version-2.4-blue.svg?style=flat-square&colorA=273133&colorB=0093ee "Latest version"
 [Ruby2.3-shield]: https://img.shields.io/badge/ruby-2.3%2B-blue.svg?style=flat-square&colorA=273133&colorB=ff0000 "Ruby 2.3 or later"
 [License-shield]: https://img.shields.io/badge/license-LGPL%20v3%2B-blue.svg?style=flat-square&colorA=273133&colorB=bd0000 "LGPL v3+"
 [Docker-shield]: https://img.shields.io/docker/cloud/automated/oscarakaelvis/evil-winrm.svg?style=flat-square&colorA=273133&colorB=a9a9a9 "Docker rules!"

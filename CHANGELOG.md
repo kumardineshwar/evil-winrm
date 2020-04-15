@@ -1,3 +1,6 @@
+### 2.4
+ - File permission access error now handled in exception to avoid losing connection
+
 ### 2.3
  - Fixed Invoke-Binary arguments
  - Service function improved, now show privileges over the services
